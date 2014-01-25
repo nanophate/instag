@@ -10,7 +10,7 @@ Instagram.configure do |config|
 end
 
 get '/' do
- erb :landingpage
+ erb :landpage
 end
 
 get '/oauth/connect' do
