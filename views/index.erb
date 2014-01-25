@@ -28,7 +28,7 @@
 <body>
 <h2>Instag</h2>
 <!-- The container for the list of example images -->
- <div id="links"><% @recent.each do |r| %><a href="<%=r.images.thumbnail.url%>" title="deep freez" data-gallery><img src="<%=r.images.thumbnail.url%>"></a><% end %>
+ <div id="links"><% @recent.each do |r| %><a href="<%=r.images.thumbnail.url%>" title="deep freez" data-gallery><img src="<%=r.images.standard_resolution.url%>"></a><% end %>
  </div>
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
