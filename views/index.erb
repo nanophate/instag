@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="css/demo.css">
 </head>
 <body>
-<iframe src="https://instagram.com/accounts/logout/" width="0" height="0"><h2>Instag</h2></iframe>
+<a href="https://instagram.com/accounts/logout/"><h2>Instag</h2></a>
 <!-- The container for the list of example images -->
  <div id="links"><% @recent.each do |r| %><a href="<%=r.images.standard_resolution.url%>" title="何か入れる" data-gallery><img src="<%=r.images.thumbnail.url%>"></a><% end %>
  </div>
