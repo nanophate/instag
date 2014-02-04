@@ -30,11 +30,11 @@ img {
   vertical-align: middle;
 }
 h1 {
-  line-height: 1em;
+  text-align: center;
 }
 h2,
 .item {
-  text-align: center;
+  text-align: right;
 }
 
 @media (min-width: 481px) {
