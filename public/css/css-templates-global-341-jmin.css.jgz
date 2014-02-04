@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    background: none repeat scroll 0 0 transparent;
+}
+
+:focus {
+    outline: 0;
+}
+
+body {
+    line-height: 1;
+    color: black;
+    background: white;
+    padding: 0 !important;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    vertical-align: top;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+}
+
+blockquote, q {
+    quotes: "" "";
+}
+
+img, fieldset {
+    border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: normal;
+}
+
+html body * span.clearfloat, html body * div.clearfloat, html body * li.clearfloat,
+html body * dd.clearfloat, .clearfloat {
+    background: none;
+    border: 0;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+.error {
+    color: #C00;
+    font-weight: bold;
+}
+
+.confirmation {
+    color: #080;
+    font-weight: bold;
+}
+
+div.fieldset {
+    border: solid 1px #999;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+legend span {
+    display: block;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #000;
+}
+
+form {
+    margin: 0;
+}
+
+input {
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"], input[type="input"] {
+    cursor: auto !important;
+    background: #eee;
+    border: 1px solid #9F9F9F;
+    font: 1em/1.2em Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+    padding: .2em;
+    margin: 0 .5em .6em 0;
+    color: #525252;
+    line-height: 1.2em;
+    vertical-align: middle;
+    height: 1.5em;
+}
+
+textarea {
+    cursor: auto !important;
+    background: #eee;
+    border: 1px solid #9F9F9F;
+    font: 1em/1.2em Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+    padding: .4em;
+    color: #525252;
+    line-height: 1.2em;
+}
+
+select {
+    background: url("img-builder2-fetch_select-341.png") no-repeat scroll right center #FFF !important;
+    border: 1px solid #8195A8;
+    border-radius: 5px 5px 5px 5px;
+    cursor: auto !important;
+    font-size: 1em;
+    margin: 0 0 0 -1px;
+    padding: 10px 7px 11px 0;
+    text-indent: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+
+.page2 select {
+    line-height: 22px;
+    padding: 9px 7px 9px 0;
+}
+
+#header {
+    margin: 40px auto 0;
+}
+
+#wrapper {
+    float: none;
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footer {
+    margin: 0 auto 40px;
+}
+
+.emailForm {
+    padding-top: 10px;
+}
+
+.emailform .submit-button {
+    width: 242px;
+}
+
+.emailform input.shortnice {
+    background-color: #fff;
+    border: solid 1px #0066c9;
+    font-size: 14px;
+    font-weight: normal;
+    color: #6c6a6a;
+    width: 220px;
+    padding: 7px 10px;
+    height: 16px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -o-border-radius: 4px 4px 4px 4px;
+    -ms-border-radius: 4px 4px 4px 4px;
+}
+
+.emailform input.shortnice.error {
+    border-color: red;
+}
+
+.emailform .input-holder {
+    width: 240px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.emailform .input-holder label.error {
+    position: absolute;
+    bottom: 7px;
+    right: 3px;
+    width: 200px;
+    text-align: right;
+}
+
+.btn {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: bold 13px/100% Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+    padding: .5em 1em .6em;
+    -webkit-border-radius: .35em;
+    -moz-border-radius: .35em;
+    -ms-border-radius: .35em;
+    -o-border-radius: .35em;
+    border-radius: .35em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.btn-dblue {
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .35);
+    text-shadow: 0 1px 1px #3b3b3b;
+    border: solid 1px #005fbc;
+    background-color: #0064c8;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#007dd4), to(#0064c8));
+    background-image: -webkit-linear-gradient(top, #007dd4, #0064c8);
+    background-image: -moz-linear-gradient(top, #007dd4, #0064c8);
+    background-image: -ms-linear-gradient(top, #007dd4, #0064c8);
+    background-image: -o-linear-gradient(top, #007dd4, #0064c8);
+    background-image: linear-gradient(top, #007dd4, #0064c8);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#007dd4', endColorstr='#0064c8');
+}
+
+.btn-dblue:hover {
+    background-color: #0084de;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#008be8), to(#005db8));
+    background-image: -webkit-linear-gradient(top, #008be8, #005db8);
+    background-image: -moz-linear-gradient(top, #008be8, #005db8);
+    background-image: -ms-linear-gradient(top, #008be8, #005db8);
+    background-image: -o-linear-gradient(top, #008be8, #005db8);
+    background-image: linear-gradient(top, #008be8, #005db8);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#008be8', endColorstr='#005db8');
+}
+
+.btn-dblue:active {
+    background-color: #005db8;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#005db8), to(#008be8));
+    background-image: -webkit-linear-gradient(top, #005db8, #008be8);
+    background-image: -moz-linear-gradient(top, #005db8, #008be8);
+    background-image: -ms-linear-gradient(top, #005db8, #008be8);
+    background-image: -o-linear-gradient(top, #005db8, #008be8);
+    background-image: linear-gradient(top, #005db8, #008be8);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#005db8', endColorstr='#008be8');
+}
+
+a.btn-dblue, a.btn-dblue:hover, .btn-dblue a, .btn-dblue a:hover,
+.btn-dblue h2 {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+#plug_centred {
+    margin: 10px auto 0 auto;
+    display: inline-block;
+}
+
+#plug {
+    background-color: #fff;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+#plug .icon {
+    float: left;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#plug .message {
+    float: left;
+    font-size: 13px;
+    padding-top: 5px;
+    color: #3c3c3c;
+    padding-right: 5px;
+}
+
+#plug .remove {
+    float: left;
+    border-left: 1px solid #d2d4d3;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+#plug .empty {
+    padding: 4px 0;
+    float: left;
+}
+
+#plug .brand {
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+#plug .cleared {
+    clear: both;
+}
+
+#footer {
+    margin: 0 !important;
+}
+
+.yellowbox {
+    border: 1px #a47120 solid;
+    background-color: #fff7b3 !important;
+    padding: 10px 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    width: 250px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.yellowbox p {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 50%;
+    margin-left: -63px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #2c2223;
+}
+
+.page.page2 {
+    padding: 0;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page.page2.mobile {
+    width: 600px;
+    margin: 0;
+}
+
+.page-block {
+    position: relative;
+}
+
+.page-element {
+    position: absolute;
+}
+
+.widget-text .contents {
+    font-size: 14px;
+}
+
+.notification {
+    display: none;
+}
+
+.notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    z-index: 998;
+    -moz-opacity: .7;
+    opacity: .70;
+    filter: alpha(opacity=70);
+}
+
+.notification-inner {
+    width: 700px;
+    position: fixed;
+    top: 40%;
+    left: 20%;
+    z-index: 999;
+    color: #fff;
+    font-size: 50px;
+    line-height: 40px;
+    text-align: center;
+    line-height: 150%;
+}
+
+.notification .loading {
+    display: none;
+    height: 40px;
+    width: 40px;
+}
+
+.notification .close-button {
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    color: #1E90FF;
+    cursor: pointer;
+}
+
+.contents p {
+    margin: 0;
+}
+
+.input-holder>label, .input-holder.field-select .field-element>label {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 0 5px;
+}
+
+.field-textarea {
+    margin-bottom: 5px;
+}
+
+.input-holder>label.error {
+    margin: 0 0 10px;
+}
+
+#plug-fixed {
+    background-color: rgba(0, 0, 0, 0.701961);
+    border: solid 1px rgba(255, 255, 255, 0.207843);
+    border-radius: 0 5px 0 0;
+    bottom: 0;
+    height: 45px;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+}
+
+#plug-fixed img, #plug-fixed div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#plug-fixed img {
+    margin: 9px 10px 0;
+}
+
+#plug-fixed div {
+    line-height: 45px;
+}
+
+#plug-fixed a {
+    color: #FFF;
+    display: block;
+    line-height: 45px;
+    text-decoration: none;
+    width: 100%;
+}
+
