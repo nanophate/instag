@@ -1,0 +1,1 @@
+Translate=function(){this.translations=[];var a=this;this.get=function(c){for(var b=0;b<this.translations.length;b++){if(this.translations[b].original==c){return this.translations[b].translated}}return c};this.set=function(b,c){this.translations.push(new TranslateElement(b,c))}};TranslateElement=function(a,b){this.original=a;this.translated=b};

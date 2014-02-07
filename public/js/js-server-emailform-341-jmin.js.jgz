@@ -1,0 +1,127 @@
+ijQuery(document).ready(function() {
+    ijQuery.validator.addMethod("checkdefaultvalue", function(b, a) {
+        if (ijQuery(a).hasClass("required")) {
+            return (b != ijQuery(a).attr("default_value"))
+        } else {
+            return true
+        }
+    }, "Please fill this field.");
+    ijQuery(".email-form").each(function() {
+        ijQuery(this).validate({
+            ignore: "",
+            errorPlacement: function(a, b) {
+                a.appendTo(b.parent().parent())
+            },
+            submitHandler: function() {
+                try {
+                    ijQuery(".notification").show();
+                    ijQuery(".notification-inner").css("left", ((ijQuery(window).width() - ijQuery(".notification-inner").width()) / 2) + "px");
+                    ijQuery(".notification .loading").show();
+                    ijQuery(".notification .message").html(_Translate.get("Processing..."));
+                    var e = this.currentForm;
+                    ijQuery(e).find("input").each(function() {
+                        if (!ijQuery(this).hasClass("required") && ijQuery(this).attr("default_value") == ijQuery(this).val()) {
+                            ijQuery(this).remove()
+                        }
+                    });
+                    var g = {};
+                    g.ajax = true;
+                    g.fields = ijQuery(e).serializeArray();
+                    for (var d = 0; d < g.fields.length; d++) {
+                        var b = ijQuery('input[name="' + g.fields[d].name + '"]');
+                        g.fields[d].type = b.hasClass("hidden-checkbox") ? "checkbox" : b.attr("type")
+                    }
+                    var a = ijQuery(e).height();
+                    ijQuery(e).css("height", a + "px");
+                    ijQuery(e).fadeTo("slow", 1);
+                    if (!f) {
+                        var f = 1
+                    }
+                    g.version = window.__version;
+                    g.variant = window.__variant;
+                    g.preview = window.__preview;
+                    if (__instapage_proxy_services !== "PROXY_SERVICES") {
+                        __instapage_services = __instapage_proxy_services
+                    }
+                    ijQuery.ajax({
+                        url: __instapage_services + "/api/email/" + window.__page_id,
+                        data: g,
+                        type: "post",
+                        dataType: "json",
+                        success: function(i) {
+                            if (!i || i.error) {
+                                ijQuery(".notification .loading").hide();
+                                ijQuery(".notification .close-button").show().click(function() {
+                                    closeDim()
+                                });
+                                ijQuery(".notification .message").html(i && i.error_message ? _Translate.get(i.error_message) : _Translate.get("Something went wrong, message not sent."));
+                                return false
+                            } else {
+                                var j = ijQuery(e).find("input[name=redirect]").val();
+                                ijQuery(e).find("input").each(function() {
+                                    if (!ijQuery(this).hasClass("submit-button")&&!ijQuery(this).hasClass("configuration")) {
+                                        ijQuery(this).val("")
+                                    }
+                                });
+                                if (j && j.length > 0) {
+                                    var h = setInterval(function() {
+                                        clearInterval(h);
+                                        window.location = j
+                                    }, 3000)
+                                } else {
+                                    ijQuery(".notification .loading").hide();
+                                    ijQuery(".notification .message").html(_Translate.get("Thank You!<br />Your Message Has been Sent."));
+                                    var h = setInterval(function() {
+                                        clearInterval(h);
+                                        ijQuery(".notification").hide()
+                                    }, 3000)
+                                }
+                            }
+                        },
+                        error: function() {
+                            closeDim()
+                        }
+                    });
+                    return false
+                } catch (c) {
+                    if (console) {
+                        console.log(c)
+                    }
+                }
+            }
+        })
+    });
+    ijQuery(".email-form").find('input[type="text"]').click(function() {
+        if (ijQuery(this).val() == ijQuery(this).attr("default_value")) {
+            ijQuery(this).val("")
+        }
+    }).focusout(function() {
+        if (ijQuery(this).val() == "") {
+            ijQuery(this).val(ijQuery(this).attr("default_value"))
+        }
+    });
+    ijQuery(".email-form").find('input[type="checkbox"]').change(function() {
+        ijQuery("#hidden-" + ijQuery(this).attr("id")).val(ijQuery(this).is(":checked") ? "yes" : "no")
+    });
+    ijQuery("a").click(function() {
+        if (window.__preview) {
+            return true
+        }
+        var a = this;
+        ijQuery.ajax({
+            url: __instapage_services + "/ajax/stats/conversion/" + window.__page_id + "/" + window.__version + "/" + window.__variant + "/",
+            data: {
+                type: "link",
+                link: $(a).attr("href")
+            },
+            type: "post",
+            dataType: "json",
+            success: function() {},
+            error: function() {}
+        });
+        return true
+    })
+});
+function closeDim() {
+    ijQuery(".notification").hide()
+};

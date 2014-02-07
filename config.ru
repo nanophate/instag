@@ -1,2 +1,2 @@
-require 'app.rb'
+require './site'
 run Sinatra::Application
