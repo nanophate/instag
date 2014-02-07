@@ -1,0 +1,8 @@
+site:
+  title: 'Instag - Categrorize your tags'
+html:
+  start:
+    splash: !!html
+      <br>Oh My Tag!!<br>
+    description: !!html
+      <br>Search your tags<br>
