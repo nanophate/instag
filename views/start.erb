@@ -43,12 +43,14 @@
           </div>
          </form>
       </div>
+       <center>
         <div id="links">
             <% @data.each do |data| %>
              <% if link = data['link'] %>
                <a href="<%=link%>"/><img src="<%=data['low']%>" /></a>
              <% end %>
             <% end %>
+       </center>
 <!-- Main jumbotron for a primary marketing message or call to action -->
       <footer>
         <p><a href="https://twitter.com/nanophate"> &copy; @nanophate <script language="JavaScript" type="text/javascript">document.write((new Date()).getFullYear());</script></a></p>
