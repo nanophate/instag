@@ -6,6 +6,8 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
+    shotgun (0.9)
+      rack (>= 1.0)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -23,6 +25,7 @@ PLATFORMS
 DEPENDENCIES
   json
   r18n-core
+  shotgun
   sinatra
   sinatra-iphone-views
   sinatra-r18n

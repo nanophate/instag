@@ -6,3 +6,6 @@ gem 'sinatra-iphone-views'
 gem 'r18n-core'
 gem 'json'
 
+group :development do
+  gem 'shotgun'
+end
