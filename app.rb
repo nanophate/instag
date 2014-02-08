@@ -17,7 +17,7 @@ before do
   @error       = false
 
   # sinatra-r18n
-  set :translations, "./i18n/tag/"
+  set :translations, "i18n/tag/"
 end
 
 get '/start' do
