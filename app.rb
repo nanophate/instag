@@ -11,7 +11,7 @@ before do
   @target_tag = params[:t]
   @target_path = "/#{@target_tag}"
   @target_url  = "https://api.instagram.com/v1/tags#{@target_path}/media/recent?access_token="
-  @base_url    = @target_url + '991739590.0a32e18.3beed1e07ec24441bf5c7901259d4067'
+  @base_url    = @target_url + 'ENV['PASSWORD']'
   @data        = []
   @error       = false
 
