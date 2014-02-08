@@ -5,7 +5,6 @@ require 'pp'
 require 'rubygems'
 require 'json'
 require 'sinatra'
-require 'sinatra/r18n'
 
 before do
 
@@ -15,6 +14,7 @@ before do
   @base_url    = @target_url + '991739590.0a32e18.3beed1e07ec24441bf5c7901259d4067'
   @data        = []
   @error       = false
+
 end
 
 get '/start' do
