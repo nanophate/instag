@@ -1,0 +1,8 @@
+site:
+  title: 'Instag - タグをカテゴリ化'
+html:
+  error:
+    splash: !!html
+      <br>Oh My Tag!!<br>
+    description: !!html
+      <br>検索してください。<br>
