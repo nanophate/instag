@@ -15,9 +15,6 @@ before do
   @base_url    = @target_url + '991739590.0a32e18.3beed1e07ec24441bf5c7901259d4067'
   @data        = []
   @error       = false
-
-  # sinatra-r18n
-  set :translations, "./i18n/tag/"
 end
 
 get '/start' do
