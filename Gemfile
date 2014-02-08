@@ -6,7 +6,7 @@ gem 'sinatra-iphone-views', '1.0.0'
 gem 'r18n-core', '1.1.7'
 gem 'json', '1.5.5'
 gem 'slim', '0.9.0'
-gem 'haml', '3.0.25'
+gem 'haml', '4.0.5'
 
 group :development do
   gem 'shotgun'
