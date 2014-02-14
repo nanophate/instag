@@ -17,7 +17,7 @@ before do
 
 end
 
-get '/' do
+get '/start' do
   erb :index
 end
 
