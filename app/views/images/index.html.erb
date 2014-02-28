@@ -20,12 +20,14 @@
           </div>
          </form>
       </div>
+      <center>
         <div id="js-pic-list">
             <% @data.each do |data| %>
              <% if link = data['link'] %>
                <a href="<%=link%>"/><img src="<%=data['low']%>" /></a>
              <% end %>
             <% end %>
+      </center>
 <!-- Main jumbotron for a primary marketing message or call to action -->
       <footer>
         <p>Copyright 2014 
