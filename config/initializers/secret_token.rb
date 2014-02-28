@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-InstagRails::Application.config.secret_key_base = 'cdc477e6afed6b99519ea6790a469c23c96b5c033fca21c1c370235883c8dcda62cacf370702eea6a6e35f07292ee4edbbf80633c51494a406939e7ee13406e1'
+Instag::Application.config.secret_key_base = '1fb484806fe79fa69f2ffdff7741ae0ba30a02a8466801e86d2f6e7faaaa0f012cb81587eec47e6dd0f8f469906f5b10db7f302fc4e30433d2bdbcd00bf765b4'
