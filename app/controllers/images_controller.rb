@@ -11,7 +11,7 @@ class ImagesController < ApplicationController
 		@target_path = "/#{@target_tag}"
 		@target_url  = "https://api.instagram.com/v1/tags#{@target_path}/media/recent?access_token="
 		#@target_url  = "https://api.instagram.com/v1/tags/cat/media/recent?access_token="
-		@base_url    = @target_url + "ENV['PASWORD']" 
+		@base_url    = @target_url + "991739590.22c41e6.9cb4b407e659469ba539bf4f0d9f08e3" 
 		@data        = []
 		@error       = false
 		if @target_tag != nil
