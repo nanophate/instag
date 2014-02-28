@@ -15,7 +15,7 @@
 development:
   adapter: sqlite3
   encoding: unicode
-  database: Instag_development
+  database: instag_development
   pool: 5
   username: postgres
   password:
@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: Instag_test
+  database: instag_test
   pool: 5
   username: postgres
   password:
@@ -49,7 +49,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: Instag_production
+  database: instag_production
   pool: 5
   username: postgres
   password:
