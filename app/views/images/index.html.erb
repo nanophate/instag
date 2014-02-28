@@ -10,16 +10,33 @@
   'production'>
     <h1 id='js-header-name'></h1>
     <center>
-      <img <%= image_tag 'logo114.png' %> />
+      <img <%= image_tag 'logo114.png' %>
     </center>
+             <form action="/" method="before">
+          <div id="custom-search-input" class="input-group col-md-12">
+            <input name="tag" type="text" class="  search-query form-control" placeholder="#tags" />
+            <span class="input-group-btn">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+         </form>
+      </div>
+    <section>
     <ul id='js-pic-list'>
-      <% @data.each do |data| %><% if link = data['link'] %>
-      <li id='is-pic-list-last-item'>
-        <a href="%3C%=link%%3E" target="_blank" style=
-        "visibility: visible; display: inline;"></a><img src=
-        "%3C%=data['low']%%3E" />
-      </li><% end %><% end %>
-    </ul>
+    <% @data.each do |data| %>
+      <% if link = data['link'] %>
+      <li>
+        <a href="<%=link%>" target="_blank" style=
+        "visibility: visible; display: inline;"><img src=
+        "<%=data['low']%>" /></a>
+      </li>
+     <% end %>
+     <% end %>
+    </section></ul>
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <p>
       Copyright 2014 <a href=
