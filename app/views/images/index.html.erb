@@ -1,15 +1,16 @@
-<body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-    <!-- delete jumbotron for a primary marketing message or call to action -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>Instag</title>
+</head>
+<body class='home-controller index-action' data-rails-env='production'>
+  <h1 id='js-header-name'></h>
+  <center><img alt="Your Square Tag" src="<%= image_tag 'logo114.png' %></img></center>
     <div id="page-container">
       <div class="container" align="center">
-        <%= image_tag 'logo114.png' %>
          <form action="/" method="before">
           <div id="custom-search-input" class="input-group col-md-12">
             <input name="tag" type="text" class="  search-query form-control" placeholder="tags" />
-            
             <span class="input-group-btn">
               <span class="input-group-btn">
                 <button class="btn btn-primary" type="button">
@@ -20,14 +21,13 @@
           </div>
          </form>
       </div>
-      <center>
-        <div id="js-pic-list">
-            <% @data.each do |data| %>
-             <% if link = data['link'] %>
-               <a href="<%=link%>"/><img src="<%=data['low']%>" /></a>
-             <% end %>
-            <% end %>
-      </center>
+    </div>
+<section><ul id='js-pic-list'>
+  <% @data.each do |data| %>
+    <% if link = data['link'] %>
+      <a href="<%=link%>"/><img src="<%=data['low']%>" /></a>
+    <% end %>
+  <% end %></li></ul></section>
 <!-- Main jumbotron for a primary marketing message or call to action -->
       <footer>
         <p>Copyright 2014 
