@@ -5,6 +5,8 @@
     <title>
       Instag
     </title>
+    <%= stylesheet_link_tag    'application', :media => 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
   <body class='home-controller index-action' data-rails-env=
   'production'>
@@ -26,7 +28,8 @@
          </form>
       </div>
     <section>
-    <ul id='js-pic-list'>
+    <center>
+    <ul id='links'>
     <% @data.each do |data| %>
       <% if link = data['link'] %>
       <li>
@@ -37,6 +40,7 @@
      <% end %>
      <% end %>
     </section></ul>
+  </center>
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <p>
       Copyright 2014 <a href=
