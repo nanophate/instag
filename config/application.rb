@@ -18,12 +18,12 @@ module Instag
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :en
+    #config.i18n.default_locale = :en
 
     # Set to .sass as default for stylesheets
-    config.sass.preferred_syntax = :sass
+    #config.sass.preferred_syntax = :sass
 
     # Set bower's assets path
-    config.assets.paths << Rails.root.join('vendor/assets/components')
+    #config.assets.paths << Rails.root.join('vendor/assets/components')
   end
 end
