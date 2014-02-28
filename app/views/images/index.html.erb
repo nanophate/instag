@@ -1,0 +1,51 @@
+<body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- delete jumbotron for a primary marketing message or call to action -->
+    <div id="page-container">
+      <div class="container" align="center">
+        <%= image_tag 'logo114.png' %>
+         <form action="/" method="before">
+          <div id="custom-search-input" class="input-group col-md-12">
+            <input name="tag" type="text" class="  search-query form-control" placeholder="#tags" />
+            <span class="input-group-btn">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">
+                  <span class=" glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+         </form>
+      </div>
+        <div id="js-pic-list">
+            <% @data.each do |data| %>
+             <% if link = data['link'] %>
+               <a href="<%=link%>"/><img src="<%=data['low']%>" /></a>
+             <% end %>
+            <% end %>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+      <footer>
+        <p>&copy; <a href="https://twitter.com/nanophate">nanophate <script language="JavaScript" type="text/javascript">document.write((new Date()).getFullYear());</script></a></p>
+      </footer>
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47881845-1', 'instag.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+    </div>
+    </body>
