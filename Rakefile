@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-InstagRails::Application.load_tasks
+Instag::Application.load_tasks
