@@ -11,7 +11,7 @@ class ImagesController < ApplicationController
 		@target_path = "/#{@target_tag}"
 		@target_url  = "https://api.instagram.com/v1/tags#{@target_path}/media/recent?access_token="
 		#@target_url  = "https://api.instagram.com/v1/tags/cat/media/recent?access_token="
-		@base_url    = @target_url + "991739590.22c41e6.9cb4b407e659469ba539bf4f0d9f08e3" 
+		@base_url    = @target_url + "991739590.fdaeaee.b38dcbd748954d3c8f8b825528b1189c" 
 		@data        = []
 		@error       = false
 		if @target_tag != nil
@@ -37,7 +37,7 @@ def check_id(max_id)
   begin
     return max_id if max_id == max_id.to_i.to_s
   rescue
-    redirect '/start' #TODO
+    redirect '/' #TODO
   end
   nil
 end
@@ -60,7 +60,7 @@ def parse_json(url)
 end
 
 def extract_data(data)
-  redirect '/start' if data.empty? #TODO
+  redirect '/' if data.empty? #TODO
 
   result = []
   data.each do |v|
