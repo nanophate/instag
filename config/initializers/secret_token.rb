@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Instag::Application.config.secret_key_base = '966d37614c7bb591745424dbb8808723f03b7f62057ed282a58ac779eb02dee86c78c5985dbba898eac5da96bdc43ad5db14e293b1cef8b1795e4605c78ca179'
+Instag::Application.config.secret_key_base = '17f6389f124e220c433738c1927facb28c8e1e9d82a57a754bb018b2639638c38750ec5bc463035e2e042152207dc411c3324678bf53b286d27964c8de86d6a2'
