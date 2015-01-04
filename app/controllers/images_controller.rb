@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 require 'open-uri'
 require 'uri'
 require 'pp'
@@ -8,10 +10,10 @@ require 'json'
 class ImagesController < ApplicationController
   def index
 		@target_tag = params[:tag]
-		@target_path = "/#{@target_tag}"
+		@target_path = URI.encode("/#{@target_tag}")
 		@target_url  = "https://api.instagram.com/v1/tags#{@target_path}/media/recent?access_token="
-		#@target_url  = "https://api.instagram.com/v1/tags/cat/media/recent?access_token="
-		@base_url    = @target_url + "991739590.fdaeaee.b38dcbd748954d3c8f8b825528b1189c" 
+		#@target_url  = "https://api.instagram.com/v1/tags/ねこ/media/recent?access_token="
+		@base_url    = @target_url + "991739590.fdaeaee.b38dcbd748954d3c8f8b825528b1189c"
 		@data        = []
 		@error       = false
 		if @target_tag != nil
